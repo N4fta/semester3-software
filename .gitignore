@@ -4,6 +4,8 @@ files
 # Have their own Repos
 *front-end
 *back-end
+*frontend
+*backend
 *docu
 group-project
 individual-project
