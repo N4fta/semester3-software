@@ -1,2 +1,9 @@
 # Folder with lesson materials (ppts, etc.)
 files
+
+# Have their own Repos
+*front-end
+*back-end
+*docu
+group-project
+individual-project
