@@ -16,4 +16,6 @@ public interface CountryRepository {
     List<CountryEntity> findAll();
 
     int count();
+
+    void deleteById(long countryId);
 }

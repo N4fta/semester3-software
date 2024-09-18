@@ -58,4 +58,9 @@ public class FakeCountryRepositoryImpl implements CountryRepository {
     public int count() {
         return this.savedCountries.size();
     }
+
+    @Override
+    public void deleteById(long countryId) {
+        this.savedCountries.removeIf(countryEntity -> countryEntity.getId().equals(countryId));
+    }
 }
