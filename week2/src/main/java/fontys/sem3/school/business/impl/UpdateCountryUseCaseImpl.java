@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class UpdateSCountryUseCaseImpl implements UpdateCountryUseCase {
+public class UpdateCountryUseCaseImpl implements UpdateCountryUseCase {
     private final CountryRepository countryRepository;
 
     @Override
