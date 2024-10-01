@@ -6,7 +6,7 @@ function InputItem(props) {
   const handleSubmit = (e) => {
     // required to prevent standard behavior of submitting
     e.preventDefault();
-
+    console.log(props);
     props.addItem(title);
   };
 
