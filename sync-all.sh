@@ -6,7 +6,7 @@ find . -maxdepth 3 -name ".git" | while read git_dir; do
   # Change to the .git folder and go back up one level since git commands cannot be run from a .git folder
   cd "$git_dir/.." || continue
 
-  echo "Committing in $(pwd)"
+  echo "Syncing $(pwd)"
 
   git pull -q                                     # Pull the latest changes quietly
   git add -A                                      # Add all changes to the staging area
