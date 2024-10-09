@@ -8,10 +8,10 @@ find . -maxdepth 3 -name ".git" | while read git_dir; do
 
   echo "Syncing $(pwd)"
 
-  git pull -q                                     # Pull the latest changes quietly
-  git add -A                                      # Add all changes to the staging area
-  git commit --short -m "Auto-committing changes" # Commit with a short message
-  git push -q                                     # Push the changes quietly
+  git pull -q                                # Pull the latest changes quietly
+  git add -A                                 # Add all changes to the staging area
+  git commit -q -m "Auto-committing changes" # Commit with a short message
+  git push -q                                # Push the changes quietly
 
   echo ""
 
