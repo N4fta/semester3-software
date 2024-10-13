@@ -18,3 +18,5 @@ find . -maxdepth 3 -name ".git" | while read git_dir; do
   # Return to the home directory
   cd "$home_dir"
 done
+
+read -p "Exit "
