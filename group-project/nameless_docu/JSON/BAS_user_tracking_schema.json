@@ -1,0 +1,563 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "event": {
+            "type": "string",
+            "enum": ["bas-user-event"]
+        },
+        "eventHeaders": {
+            "type": "object",
+            "properties": {
+                "entity": {
+                    "type": "string",
+                    "enum": ["userEvent"]
+                },
+                "entityKey": {
+                    "type": "string",
+                    "description": "UUID1234 [randomly generated per event]"
+                },
+                "eventMainType": {
+                    "type": "string",
+                    "enum": ["CREATE"]
+                },
+                "eventSubType": {
+                    "type": "string",
+                    "enum": ["newUserEvent"]
+                },
+                "eventTimestamp": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Format ISO-8601"
+                },
+                "publishedBy": {
+                    "type": "string",
+                    "enum": ["buttPackage"]
+                },
+                "policyVersion": {
+                    "type": "string",
+                    "description": "1.0.0 [schema version]"
+                }
+            },
+            "required": [
+                "entity",
+                "entityKey",
+                "eventMainType",
+                "eventSubType",
+                "eventTimestamp",
+                "publishedBy",
+                "policyVersion"
+            ]
+        },
+        "eventPayload": {
+            "type": "object",
+            "properties": {
+                "application": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        },
+                        "environment": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["name", "version", "environment"]
+                },
+                "context": {
+                    "type": "object",
+                    "properties": {
+                        "page": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "type": "string"
+                                },
+                                "designSize": {
+                                    "type": "string",
+                                    "enum": [
+                                        "designSize-xs",
+                                        "designSize-sm",
+                                        "designSize-md",
+                                        "designSize-lg",
+                                        "designSize-xl"
+                                    ]
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "canonicalUrl": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "required": ["title", "designSize", "url", "canonicalUrl"]
+                        },
+                        "session": {
+                            "type": "object",
+                            "properties": {
+                                "buttSessionId": {
+                                    "type": "string"
+                                },
+                                "vendorClickIds": {
+                                    "type": "object",
+                                    "properties": {
+                                        "google": {
+                                            "type": "string"
+                                        },
+                                        "bing": {
+                                            "type": "string"
+                                        },
+                                        "facebook": {
+                                            "type": "string"
+                                        },
+                                        "linkedIn": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": ["google", "bing", "facebook", "linkedIn"]
+                                },
+                                "referer": {
+                                    "type": "string"
+                                },
+                                "utmParameters": {
+                                    "type": "object",
+                                    "properties": {
+                                        "source": {
+                                            "type": "string"
+                                        },
+                                        "medium": {
+                                            "type": "string"
+                                        },
+                                        "campaign": {
+                                            "type": "string"
+                                        },
+                                        "term": {
+                                            "type": "string"
+                                        },
+                                        "content": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": ["source", "medium", "campaign", "term", "content"]
+                                }
+                            },
+                            "required": [
+                                "buttSessionId",
+                                "vendorClickIds",
+                                "referer",
+                                "utmParameters"
+                            ]
+                        },
+                        "client": {
+                            "type": "object",
+                            "properties": {
+                                "buttClientId": {
+                                    "type": "string"
+                                },
+                                "vendorClientIds": {
+                                    "type": "object",
+                                    "properties": {
+                                        "googleAnalytics": {
+                                            "type": "string"
+                                        },
+                                        "bing": {
+                                            "type": "string"
+                                        },
+                                        "facebook": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": ["googleAnalytics", "bing", "facebook"]
+                                },
+                                "rawUserAgent": {
+                                    "type": "string"
+                                },
+                                "device": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "vendor": {
+                                            "type": "string"
+                                        },
+                                        "model": {
+                                            "type": "string"
+                                        },
+                                        "screenWidth": {
+                                            "type": "integer"
+                                        },
+                                        "screenHeight": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "type",
+                                        "vendor",
+                                        "model",
+                                        "screenWidth",
+                                        "screenHeight"
+                                    ]
+                                },
+                                "operatingSystem": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": ["name", "version"]
+                                },
+                                "browser": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "viewportWidth": {
+                                            "type": "integer"
+                                        },
+                                        "viewportHeight": {
+                                            "type": "integer"
+                                        },
+                                        "language": {
+                                            "type": "string"
+                                        },
+                                        "cookiesEnabled": {
+                                            "type": "boolean"
+                                        },
+                                        "javaScriptEnabled": {
+                                            "type": "boolean"
+                                        },
+                                        "doNotTrackEnabled": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "required": [
+                                        "name",
+                                        "version",
+                                        "viewportWidth",
+                                        "viewportHeight",
+                                        "language",
+                                        "cookiesEnabled",
+                                        "javaScriptEnabled",
+                                        "doNotTrackEnabled"
+                                    ]
+                                },
+                                "engine": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": ["name", "version"]
+                                },
+                                "geolocation": {
+                                    "type": "object",
+                                    "properties": {
+                                        "latitude": {
+                                            "type": "string"
+                                        },
+                                        "longitude": {
+                                            "type": "string"
+                                        },
+                                        "country": {
+                                            "type": "string"
+                                        },
+                                        "region": {
+                                            "type": "string"
+                                        },
+                                        "city": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "latitude",
+                                        "longitude",
+                                        "country",
+                                        "region",
+                                        "city"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "buttClientId",
+                                "vendorClientIds",
+                                "rawUserAgent",
+                                "device",
+                                "operatingSystem",
+                                "browser",
+                                "engine",
+                                "geolocation"
+                            ]
+                        },
+                        "user": {
+                            "type": "object",
+                            "properties": {
+                                "userId": {
+                                    "type": "string"
+                                },
+                                "userEmailAddress": {
+                                    "type": "string",
+                                    "format": "email"
+                                },
+                                "personId": {
+                                    "type": "string"
+                                },
+                                "personEmailAddress": {
+                                    "type": "string",
+                                    "format": "email"
+                                },
+                                "companyId": {
+                                    "type": "string"
+                                },
+                                "companyName": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "userId",
+                                "userEmailAddress",
+                                "personId",
+                                "personEmailAddress",
+                                "companyId",
+                                "companyName"
+                            ]
+                        }
+                    },
+                    "required": ["page", "session", "client", "user"]
+                },
+                "event": {
+                    "oneOf": [
+                        { "$ref": "#/definitions/PageVisitEvent" },
+                        { "$ref": "#/definitions/ElementVisibilityEvent" },
+                        { "$ref": "#/definitions/ElementInteractionEvent" },
+                        { "$ref": "#/definitions/ViewItemListEvent" },
+                        { "$ref": "#/definitions/SelectItemEvent" },
+                        { "$ref": "#/definitions/OtherEvent" }
+                    ]
+                }
+            },
+            "required": ["application", "context", "event"]
+        }
+    },
+    "required": ["event", "eventHeaders", "eventPayload"],
+    "definitions": {
+        "Item": {
+            "type": "object",
+            "properties": {
+                "item_id": {
+                    "type": "number"
+                },
+                "item_name": {
+                    "type": "string"
+                },
+                "affiliation": {
+                    "type": "string"
+                },
+                "item_brand": {
+                    "type": "string"
+                },
+                "item_category": {
+                    "type": "string"
+                },
+                "item_category2": {
+                    "type": "string"
+                },
+                "item_list_id": {
+                    "type": "string"
+                },
+                "item_list_name": {
+                    "type": "string"
+                },
+                "index": {
+                    "type": "number"
+                },
+                "item_variant": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "number"
+                },
+                "quantity": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "item_id",
+                "item_name",
+                "affiliation",
+                "item_brand",
+                "item_category",
+                "item_category2",
+                "index",
+                "item_variant",
+                "price",
+                "quantity"
+            ]
+        },
+        "PageVisitEvent": {
+            "type": "object",
+            "properties": {
+                "eventName": {
+                    "type": "string",
+                    "enum": ["page_visit"]
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "pageType": {
+                            "type": "string"
+                        },
+                        "pageLanguage": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["pageType", "pageLanguage"]
+                },
+                "additionalData": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["eventName", "data"]
+        },
+        "ElementVisibilityEvent": {
+            "type": "object",
+            "properties": {
+                "eventName": {
+                    "type": "string",
+                    "enum": ["element_visibility"]
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "elementName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["elementName"]
+                },
+                "additionalData": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["eventName", "data"]
+        },
+        "ElementInteractionEvent": {
+            "type": "object",
+            "properties": {
+                "eventName": {
+                    "type": "string",
+                    "enum": ["element_interaction"]
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "elementName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["elementName"]
+                },
+                "additionalData": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["eventName", "data"]
+        },
+        "ViewItemListEvent": {
+            "type": "object",
+            "properties": {
+                "eventName": {
+                    "type": "string",
+                    "enum": ["view_item_list"]
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "item_list_id": {
+                            "type": "string"
+                        },
+                        "item_list_name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/Item" }
+                        }
+                    },
+                    "required": ["item_list_id", "item_list_name", "items"]
+                },
+                "additionalData": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["eventName", "data"]
+        },
+        "SelectItemEvent": {
+            "type": "object",
+            "properties": {
+                "eventName": {
+                    "type": "string",
+                    "enum": ["select_item"]
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "item_list_id": {
+                            "type": "string"
+                        },
+                        "item_list_name": {
+                            "type": "string"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/Item" },
+                            "minItems": 1,
+                            "maxItems": 1
+                        }
+                    },
+                    "required": ["item_list_id", "item_list_name", "items"]
+                },
+                "additionalData": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["eventName", "data"]
+        },
+        "OtherEvent": {
+            "type": "object",
+            "properties": {
+                "eventName": {
+                    "type": "string",
+                    "enum": ["other"]
+                },
+                "additionalData": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
+            "required": ["eventName"]
+        }
+    }
+}

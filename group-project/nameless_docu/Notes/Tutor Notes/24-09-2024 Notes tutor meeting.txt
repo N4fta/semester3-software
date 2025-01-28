@@ -1,0 +1,16 @@
+24-09-2024 Summary Notes from the tutor meeting:
+
+- Our research questions in the project plan are okay
+- We can add more user stories later in the project
+- We should send the project plan to the client and submit it on Canvas once we are fully done.
+- Our research document is good but we should add DOT framework (triangles)
+	- Which 3 components are used for each research
+	- how and where are we using, which strategies we chose
+- Problem statement, project goal, deliverables and non-deliverables are important
+- For adding more tasks - make requirements, prioritize them, put in the backlog
+- We can make a list of requirements in a way we prefer.
+	- After prioritizing put in the backlog. 
+	- Make product backlog
+- User stories should be more customer-oriented, not technical
+- It would be nice to make the project backlog until next week
+- We can use BAS World's logo and colour scheme

@@ -1,0 +1,35 @@
+name: nameless
+
+services:
+  nameless-mongodb:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=dhsrLpM8P3LqcuY
+      - MONGO_INITDB_DATABASE=Nameless_DB
+    volumes:
+      - mongodb-data:/data/db
+    container_name: mongo
+    ports:
+      - 27017:27017
+
+  nameless-backend:
+    image: n4fta/nameless:backend
+    container_name: nameless-backend
+    ports:
+      - 8080:8080
+    depends_on:
+      - nameless-mongodb
+
+  nameless-frontend:
+    image: n4fta/nameless:frontend
+    container_name: nameless-frontend
+    environment:
+      - NODE_ENV=production
+    ports:
+      - 3000:3000
+    depends_on:
+      - nameless-backend
+
+volumes:
+  mongodb-data:

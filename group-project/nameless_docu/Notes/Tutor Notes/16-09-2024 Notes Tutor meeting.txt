@@ -1,0 +1,18 @@
+16-09-2024 Summary Notes from the tutor meeting:
+
+- We need to explain what software we are going to use?
+- The Research questions can be both - professional and technical
+- We need to have at least 3 and at most 5 research questions
+- In the project plan we should only name the research question and the way we will research it. 
+- All the descriptions of the research questions should be in a separate document 
+- Structure of research document:
+  Introduction
+  First question
+  Resources
+  All the solutions proposed
+  The chosen solution and why was it chosen
+- We have to implement event handling in the first sprint
+- The tutor should be invited to Jira
+- At the end of the sprint we should ask the client whether he wants to be invited to GIT/Jira
+- The context paragraph in project plan should be more about the project and not the team
+- The phasing has to be modified with all the sprint added to it

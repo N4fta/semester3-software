@@ -1,0 +1,17 @@
+08-10-2024
+-Start Jira
+-Think of all the things we need (epic)
+-Break it down into stories with estimates
+-Daily sprint
+-Sprint end/review and start planning again
+-We need to add a goal to each sprint
+-Did we achieve that goal and why not
+-Demo for feedback
+-Retrospective after sprint review
+
+-What is the goal
+-What are the stories
+-Mark stories that are done and which aren't
+-Did we achieve our goal
+-Why not
+-Retrospective

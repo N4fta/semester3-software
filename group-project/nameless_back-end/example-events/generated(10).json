@@ -1,0 +1,94 @@
+{
+  "event": "bas-user-event",
+  "eventHeaders": {
+    "entity": "userEvent",
+    "entityKey": "UUID9201",
+    "eventMainType": "CREATE",
+    "eventSubType": "createUserEvent",
+    "eventTimestamp": "2024-11-11T12:34:56.000Z",
+    "publishedBy": "packageC",
+    "policyVersion": "1.1.0"
+  },
+  "eventPayload": {
+    "application": {
+      "name": "Another App",
+      "version": "1.5.3",
+      "environment": "testing"
+    },
+    "context": {
+      "page": {
+        "title": "Product Page",
+        "designSize": "designSize-lg",
+        "url": "https://example.com/product",
+        "canonicalUrl": "https://example.com/product"
+      },
+      "session": {
+        "buttSessionId": "session9201",
+        "vendorClickIds": {
+          "google": "clickId0002"
+        },
+        "referer": "https://anotherreferer.com/product",
+        "utmParameters": {
+          "source": "Organic",
+          "medium": "utmMedium5",
+          "campaign": "utmCampaign5",
+          "term": "utmTerm5",
+          "content": "utmContent5"
+        }
+      },
+      "client": {
+        "buttClientId": "client9201",
+        "vendorClientIds": {
+          "bing": "clientId1516"
+        },
+        "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.110 Safari/537.36",
+        "device": {
+          "type": "desktop",
+          "vendor": "Microsoft",
+          "model": "Surface Laptop",
+          "screenWidth": 1920,
+          "screenHeight": 1080
+        },
+        "operatingSystem": {
+          "name": "Windows",
+          "version": "10.0"
+        },
+        "browser": {
+          "name": "Chrome",
+          "version": "114.0.5735.110",
+          "viewportWidth": 1920,
+          "viewportHeight": 1080,
+          "language": "en-US",
+          "cookiesEnabled": true,
+          "javaScriptEnabled": true,
+          "doNotTrackEnabled": false
+        },
+        "engine": {
+          "name": "Blink",
+          "version": "537.36"
+        },
+        "geolocation": {
+          "latitude": 47.6062,
+          "longitude": -122.3321,
+          "country": "United States",
+          "region": "Washington",
+          "city": "Seattle"
+        }
+      },
+      "user": {
+        "userId": "user9201",
+        "userEmailAddress": "user9201@example.com",
+        "personId": "person9201",
+        "personEmailAddress": "person9201@example.com",
+        "companyId": "company9101",
+        "companyName": "TechCorp"
+      }
+    },
+    "event": {
+      "eventName": "page_scroll",
+      "data": {
+        "eventName": "product-scroll"
+      }
+    }
+  }
+}

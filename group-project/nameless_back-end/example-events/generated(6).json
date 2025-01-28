@@ -1,0 +1,98 @@
+{
+  "event": "bas-user-event",
+  "eventHeaders": {
+    "entity": "userEvent",
+    "entityKey": "UUID9101",
+    "eventMainType": "CREATE",
+    "eventSubType": "createUserEvent",
+    "eventTimestamp": "2024-11-15T14:20:00.000Z",
+    "publishedBy": "packageC",
+    "policyVersion": "1.1.0"
+  },
+  "eventPayload": {
+    "application": {
+      "name": "Another App",
+      "version": "1.5.3",
+      "environment": "testing"
+    },
+    "context": {
+      "page": {
+        "title": "Product Page",
+        "designSize": "designSize-lg",
+        "url": "https://example.com/product",
+        "canonicalUrl": "https://example.com/product"
+      },
+      "session": {
+        "buttSessionId": "session9101",
+        "vendorClickIds": {
+          "google": "clickId0001",
+          "bing": "clickId1112",
+          "facebook": "clickId2223"
+        },
+        "referer": "https://referer.com/product",
+        "utmParameters": {
+          "source": "Direct",
+          "medium": "utmMedium4",
+          "campaign": "utmCampaign4",
+          "term": "utmTerm4",
+          "content": "utmContent4"
+        }
+      },
+      "client": {
+        "buttClientId": "client9101",
+        "vendorClientIds": {
+          "googleAnalytics": "clientId1011",
+          "bing": "clientId1213",
+          "facebook": "clientId1415"
+        },
+        "rawUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.110 Safari/537.36",
+        "device": {
+          "type": "laptop",
+          "vendor": "Apple",
+          "model": "MacBook Pro",
+          "screenWidth": 2560,
+          "screenHeight": 1600
+        },
+        "operatingSystem": {
+          "name": "MacOs",
+          "version": "10.15.7"
+        },
+        "browser": {
+          "name": "Chrome",
+          "version": "114.0.5735.110",
+          "viewportWidth": 2560,
+          "viewportHeight": 1600,
+          "language": "en-US",
+          "cookiesEnabled": true,
+          "javaScriptEnabled": true,
+          "doNotTrackEnabled": false
+        },
+        "engine": {
+          "name": "Blink",
+          "version": "537.36"
+        },
+        "geolocation": {
+          "latitude": "37.7749",
+          "longitude": "-122.4194",
+          "country": "United States",
+          "region": "California",
+          "city": "San Francisco"
+        }
+      },
+      "user": {
+        "userId": "user9101",
+        "userEmailAddress": "user9101@example.com",
+        "personId": "person9101",
+        "personEmailAddress": "person9101@example.com",
+        "companyId": "company9101",
+        "companyName": "TechCorp"
+      }
+    },
+    "event": {
+      "eventName": "page_scroll",
+      "data": {
+        "eventName": "product-scroll"
+      }
+    }
+  }
+}

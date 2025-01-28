@@ -1,0 +1,98 @@
+{
+  "event": "bas-user-event",
+  "eventHeaders": {
+    "entity": "userEvent",
+    "entityKey": "UUID5678",
+    "eventMainType": "UPDATE",
+    "eventSubType": "updateUserEvent",
+    "eventTimestamp": "2024-11-12T14:45:00.000Z",
+    "publishedBy": "dataTool",
+    "policyVersion": "1.0.0"
+  },
+  "eventPayload": {
+    "application": {
+      "name": "Insights Tracker",
+      "version": "3.1.2",
+      "environment": "staging"
+    },
+    "context": {
+      "page": {
+        "title": "User Stats",
+        "designSize": "designSize-xl",
+        "url": "https://example.com/stats",
+        "canonicalUrl": "https://example.com/stats"
+      },
+      "session": {
+        "buttSessionId": "session5678",
+        "vendorClickIds": {
+          "google": "clickId2345",
+          "facebook": "clickId6789",
+          "linkedIn": "clickId8765"
+        },
+        "referer": "https://referer.com/stats",
+        "utmParameters": {
+          "source": "LinkedIn",
+          "medium": "utmMedium3",
+          "campaign": "utmCampaign3",
+          "term": "utmTerm3",
+          "content": "utmContent3"
+        }
+      },
+      "client": {
+        "buttClientId": "client5678",
+        "vendorClientIds": {
+          "googleAnalytics": "clientId2345",
+          "facebook": "clientId6789",
+          "linkedIn": "clientId8765"
+        },
+        "rawUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.100 Safari/537.36",
+        "device": {
+          "type": "laptop",
+          "vendor": "Apple",
+          "model": "MacBook Pro",
+          "screenWidth": 1440,
+          "screenHeight": 900
+        },
+        "operatingSystem": {
+          "name": "MacOs",
+          "version": "10.15.7"
+        },
+        "browser": {
+          "name": "Safari",
+          "version": "16.0",
+          "viewportWidth": 1440,
+          "viewportHeight": 900,
+          "language": "en-US",
+          "cookiesEnabled": true,
+          "javaScriptEnabled": true,
+          "doNotTrackEnabled": true
+        },
+        "engine": {
+          "name": "WebKit",
+          "version": "605.1.15"
+        },
+        "geolocation": {
+          "latitude": "40.7128",
+          "longitude": "-74.0060",
+          "country": "United States",
+          "region": "New York",
+          "city": "New York City"
+        }
+      },
+      "user": {
+        "userId": "user5678",
+        "userEmailAddress": "user2@example.com",
+        "personId": "person5678",
+        "personEmailAddress": "person2@example.com",
+        "companyId": "company5678",
+        "companyName": "Another Company"
+      }
+    },
+    "event": {
+      "eventName": "form_submit",
+      "data": {
+        "eventName": "user-stats-form"
+      }
+    }
+  }
+}

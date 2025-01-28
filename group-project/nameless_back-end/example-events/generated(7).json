@@ -1,0 +1,98 @@
+{
+  "event": "bas-user-event",
+  "eventHeaders": {
+    "entity": "userEvent",
+    "entityKey": "UUID1122",
+    "eventMainType": "DELETE",
+    "eventSubType": "deleteUserEvent",
+    "eventTimestamp": "2024-11-18T09:55:00.000Z",
+    "publishedBy": "packageD",
+    "policyVersion": "1.2.0"
+  },
+  "eventPayload": {
+    "application": {
+      "name": "Test App",
+      "version": "0.9.8",
+      "environment": "production"
+    },
+    "context": {
+      "page": {
+        "title": "Support Page",
+        "designSize": "designSize-md",
+        "url": "https://example.com/support",
+        "canonicalUrl": "https://example.com/support"
+      },
+      "session": {
+        "buttSessionId": "session1122",
+        "vendorClickIds": {
+          "google": "clickId3333",
+          "bing": "clickId4444",
+          "facebook": "clickId5555"
+        },
+        "referer": "https://referer.com/support",
+        "utmParameters": {
+          "source": "Email",
+          "medium": "utmMedium5",
+          "campaign": "utmCampaign5",
+          "term": "utmTerm5",
+          "content": "utmContent5"
+        }
+      },
+      "client": {
+        "buttClientId": "client1122",
+        "vendorClientIds": {
+          "googleAnalytics": "clientId1617",
+          "bing": "clientId1819",
+          "facebook": "clientId2021"
+        },
+        "rawUserAgent": "Mozilla/5.0 (Linux; Android 12; SM-G996U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.131 Mobile Safari/537.36",
+        "device": {
+          "type": "mobile",
+          "vendor": "Samsung",
+          "model": "Galaxy S21",
+          "screenWidth": 1080,
+          "screenHeight": 2400
+        },
+        "operatingSystem": {
+          "name": "Android",
+          "version": "12"
+        },
+        "browser": {
+          "name": "Chrome",
+          "version": "115.0.5790.131",
+          "viewportWidth": 1080,
+          "viewportHeight": 2400,
+          "language": "en-CA",
+          "cookiesEnabled": true,
+          "javaScriptEnabled": true,
+          "doNotTrackEnabled": false
+        },
+        "engine": {
+          "name": "Blink",
+          "version": "537.36"
+        },
+        "geolocation": {
+          "latitude": "43.6510",
+          "longitude": "-79.3470",
+          "country": "Canada",
+          "region": "Ontario",
+          "city": "Toronto"
+        }
+      },
+      "user": {
+        "userId": "user1122",
+        "userEmailAddress": "user1122@example.com",
+        "personId": "person1122",
+        "personEmailAddress": "person1122@example.com",
+        "companyId": "company1122",
+        "companyName": "Support Inc."
+      }
+    },
+    "event": {
+      "eventName": "button_click",
+      "data": {
+        "eventName": "support-button"
+      }
+    }
+  }
+}

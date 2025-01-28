@@ -1,0 +1,15 @@
+10-09-2024 Tutor Notes:
+
+- Every week we have a tutor meeting on monday or tuesday where we have to invite the tutor via e-mail and have an agenda ready.
+- We get a new task every week. This week is the project plan.
+- Minutes and agenda's need to be sent to the tutor via e-mail.
+- We only have team feedpulses.
+- We have to invite tutor and project owner to the Gitlab repositories.
+- We don't have to send the client any documents before the meeting.
+- We need to make goals for all the sprints.
+- We need to tell the client what choices we are making and we should document these choices.
+- We use Jira
+- Docker Container is mandatory, AWS is optional.
+- We need to have a Design Architecture document.
+- We need to divide the tasks equally.
+- User stories need to be written.

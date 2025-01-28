@@ -1,0 +1,99 @@
+For JSON Generator: https://json-generator.com/
+
+{
+event: 'bas-user-event',
+  eventHeaders: {
+    entity: 'userEvent',
+    entityKey: '{{guid()}}',
+    eventMainType: "CREATE",
+    eventSubType: "newUserEvent",
+    eventTimestamp: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss ")}}',
+    publishedBy: "buttPackage",
+    policyVersion: "1.0.0 [schema version]"
+  },
+    eventPayload: {
+      application: {
+        name: 'BAS',
+        version: '1',
+        environment: 'production'  
+      },
+      context: {
+        page: {
+          title: '{{lorem(1, "word")}}',
+          designSize: '{{random("designSize-xs","designSize-sm","designSize-md","designSize-lg","designSize-xl")}}',
+            url: '{{lorem(1, "word")}}.com',
+          canonicalUrl: '{{lorem(1, "word")}}.com'
+        },
+        session: {
+          buttSessionId: '{{guid()}}',
+            vendorClickIds: {
+              google: '{{guid()}}',
+              bing: '{{guid()}}',
+              facebook: '{{guid()}}',
+              linkedIn: '{{guid()}}'
+            },
+          referer: '{{lorem(2, "word")}}',
+          utmParameters: {
+            source: '{{firstName()}}',
+            medium: '{{firstName()}}',
+            campaign: '{{firstName()}}',
+            term: '{{firstName()}}',
+            content: '{{firstName()}}'
+          },
+          client: {
+            buttClientId: '{{guid()}}',
+            vendorClientIds: {
+              googleAnalytics: '{{guid()}}',
+              bing: '{{guid()}}',
+              facebook: '{{guid()}}'
+            },
+            rawUserAgent: '{{firstName()}}',
+            device: {
+              type: '{{firstName()}}',
+              vendor: '{{firstName()}}',
+              model: '{{firstName()}}',
+              screenWidth: '{{integer()}}',
+              screenHeight: '{{integer()}}'
+            },
+            operatingSystem: {
+              name: '{{firstName()}}',
+              varsion: '{{integer()}}'
+            },
+            bowser: {
+              name: '{{firstName()}}',
+              varsion: '{{integer()}}',
+              viewportWidth: '{{integer()}}',
+              viewportHeight: '{{integer()}}',
+              language: '{{country("abbreviation")}}',
+              cookiesEnabled: '{{bool()}}',
+              javaScriptEnabled: '{{bool()}}',
+              doNotTrackEnabled: '{{bool()}}'
+            },
+            engine: {
+              name: '{{firstName()}}',
+              varsion: '{{integer()}}'
+            },
+            geolocation: {
+              latitude: '{{firstName()}}',
+              longitude: '{{firstName()}}',
+              country: '{{country()}}',
+              region: '{{state()}}',
+              city: '{{city()}}'
+            },
+            user: {
+              userId: '{{objectId()}}',
+              userEmailAddress: '{{firstName()}}@bas.com',
+              personId: '{{objectId()}}',
+              personEmailAddress: '{{firstName()}}@bas.com',
+              companyId: '{{objectId()}}',
+              companyName: '{{firstName()}}'
+            }
+          }
+        },
+      event: {
+        eventName: 'other',
+        additionalData: '{{lorem(1,"paragraphs")}}' 
+        }
+      }
+    }
+}

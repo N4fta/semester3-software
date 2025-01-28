@@ -1,0 +1,79 @@
+Our Sprint Goals:
+- Drag & Drop System
+- Widget Design
+- Widget Functionality
+- Storing Data
+- Backend to Frontend
+- Fake User Event Data
+
+Completed:
+- Drag & Drop System
+- Widget Design
+- Widget Functionality
+- Storing Data
+- Backend to Frontend
+- Fake User Event Data
+
+Completed:
+- Storing Data
+- More Widget Variety
+
+Summary:
+We completed most of our goals except for some that were too broad to finish in one go (storing Data and all widget versions).
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Feedback from Client:
+- Add a default dashboard to show functionality and focus less on extras
+- Focus more on functionality (MVP)
+- Bring the demo to life, add buttons that update data
+[From SCRUM presentation:]
+- SCRUM is AN Agile Framework, not the only one
+- Daily Scrum meetings 15min
+- Fun retrospectives
+- Scrum master position
+- DoD (Definition of Done) - User Stories, Acceptance Criteria, Test Cases (for edge case)
+- Daily JIRA updates
+- Review Column (high priority) in JIRA
+- Story Mapping & Slicing (/Skeleton)
+- Focus more on value, vertical slices
+
+Our Retrospective:
+[STOP:]
+- Working on non-MVP features
+- Focusing too much on design
+[START:]
+- Focusing on MVP features
+- Applying SCRUM principles (Mapping User stories, Defining "Done")
+- Goals that add value to client
+- Add reviewing step to JIRA workflow
+- Using JIRA more seriously/frequently
+[CONTINUE:]
+- Focusing on Presentables
+- Task Division
+- Good teamwork
+- Being critical
+- Asking for feedback
+
+Summary:
+While a lot of work was done we were a bit off track. We should have focused more on MVP features, notably showing actual data on the dashboard, something that add values in the clients eyes (vertical). As for presenting all groups were recommended to show a test of the app working with, for example, a button that generated fake data that updated the graphs in real-time.
+We then redetermined our priorities in an Agile Board and created a walking Skeleton with all the features we wanted from a client perspective (vertical) instead of our developer perspective and created some user stories & tasks in JIRA for the next sprint.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Next Sprint US (User Stories):
+- Database setup - first we are going to research on what type of database we are going to use (MySQL, PostgreSQL, MongoDB, Redis etc.) and then set it up replacing fake repositories with real ones
+- Fake JSON generator - we have to create and set up the generation of fake data according to the schema provided
+- Research document - we are going to structure it using DOT framework and "What? How? Why?" structure
+- Create testing website - client mentioned that it would be nice to have the website with the button, which, when pressed, will send the fake event to the dashboard 
+- Update documents (and namely Project plan) based on client's feedback - since we are working using Agile, the constant feedback of the client ensures that the application look closer to what he wants than to what we think is necessary. We sent all our documentation to the client in the end of Sprint B, so we should update it based on feedback
+- Unit Tests
+- Fetch data from Back-end
+- Live Feed Widget - as one of the core features of the dashboard, live feed should be implemented first, so the most recent events will be shown straight after they occur
+- Popular Categories Widget
+- Device Types Widget
+- Number of sessions over Time Widget
+- Marketing Sources Widget
+
+Summary:
+As can be seen while we still have some more broad and developer aligned tasks most of them represent features that will add real value to the client (Widget US).

@@ -1,0 +1,168 @@
+Table Event {
+  id int [primary key]
+  eventType enum('bas-user-event') [not null]
+}
+
+Table EventHeaders {
+  id int [primary key]
+  entity enum('userEvent') [not null]
+  entityKey varchar(255) [not null]
+  eventMainType enum('CREATE') [not null]
+  eventSubType enum('newUserEvent') [not null]
+  eventTimestamp datetime [not null]
+  publishedBy enum('buttPackage') [not null]
+  policyVersion varchar(10) [not null]
+  eventId int
+}
+
+Table Application {
+  id int [primary key]
+  name varchar(255) [not null]
+  version varchar(50) [not null]
+  environment varchar(50) [not null]
+  eventId int
+}
+
+Table Context {
+  id int [primary key]
+  eventId int
+}
+
+Table Page {
+  id int [primary key]
+  title varchar(255) [not null]
+  designSize enum('designSize-xs', 'designSize-sm', 'designSize-md', 'designSize-lg', 'designSize-xl') [not null]
+  url varchar(255) [not null]
+  canonicalUrl varchar(255) [not null]
+  contextId int
+}
+
+Table Session {
+  id int [primary key]
+  buttSessionId varchar(255) [not null]
+  referer varchar(255)
+  contextId int
+}
+
+Table VendorClickIds {
+  id int [primary key]
+  google varchar(255)
+  bing varchar(255)
+  facebook varchar(255)
+  linkedIn varchar(255)
+  sessionId int
+}
+
+Table UTMParameters {
+  id int [primary key]
+  source varchar(255)
+  medium varchar(255)
+  campaign varchar(255)
+  term varchar(255)
+  content varchar(255)
+  sessionId int
+}
+
+Table Client {
+  id int [primary key]
+  buttClientId varchar(255) [not null]
+  rawUserAgent text [not null]
+  contextId int
+}
+
+Table VendorClientIds {
+  id int [primary key]
+  googleAnalytics varchar(255)
+  bing varchar(255)
+  facebook varchar(255)
+  clientId int
+}
+
+Table Device {
+  id int [primary key]
+  type varchar(50)
+  vendor varchar(50)
+  model varchar(50)
+  screenWidth int
+  screenHeight int
+  clientId int
+}
+
+Table OperatingSystem {
+  id int [primary key]
+  name varchar(50)
+  version varchar(50)
+  clientId int
+}
+
+Table Browser {
+  id int [primary key]
+  name varchar(50)
+  version varchar(50)
+  viewportWidth int
+  viewportHeight int
+  language varchar(50)
+  cookiesEnabled boolean
+  javaScriptEnabled boolean
+  doNotTrackEnabled boolean
+  clientId int
+}
+
+Table Engine {
+  id int [primary key]
+  name varchar(50)
+  version varchar(50)
+  clientId int
+}
+
+Table Geolocation {
+  id int [primary key]
+  latitude varchar(50)
+  longitude varchar(50)
+  country varchar(50)
+  region varchar(50)
+  city varchar(50)
+  clientId int
+}
+
+Table User {
+  id int [primary key]
+  userId varchar(255) [not null]
+  userEmailAddress varchar(255) [not null]
+  personId varchar(255)
+  personEmailAddress varchar(255)
+  companyId varchar(255)
+  companyName varchar(255)
+  contextId int
+}
+
+Table EventType {
+  id int [primary key]
+  eventName enum('page_visit', 'element_visibility', 'element_interaction', 'view_item_list', 'select_item', 'other') [not null]
+  eventId int
+}
+
+Table PageVisitEvent {
+  id int [primary key]
+  pageType varchar(50) [not null]
+  pageLanguage varchar(50) [not null]
+  eventTypeId int
+}
+
+Ref: EventHeaders.eventId > Event.id
+Ref: Application.eventId > Event.id
+Ref: Context.eventId > Event.id
+Ref: Page.contextId > Context.id
+Ref: Session.contextId > Context.id
+Ref: VendorClickIds.sessionId > Session.id
+Ref: UTMParameters.sessionId > Session.id
+Ref: Client.contextId > Context.id
+Ref: VendorClientIds.clientId > Client.id
+Ref: Device.clientId > Client.id
+Ref: OperatingSystem.clientId > Client.id
+Ref: Browser.clientId > Client.id
+Ref: Engine.clientId > Client.id
+Ref: Geolocation.clientId > Client.id
+Ref: User.contextId > Context.id
+Ref: EventType.eventId > Event.id
+Ref: PageVisitEvent.eventTypeId > EventType.id

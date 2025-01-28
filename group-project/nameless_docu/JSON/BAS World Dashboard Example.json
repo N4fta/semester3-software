@@ -1,0 +1,386 @@
+{
+   "event": "bas-user-event",
+   "eventPayload": {
+      "application": {
+         "name": "bas-world-showroom",
+         "version": "1.0.10",
+         "environment": "production"
+      },
+      "context": {
+         "page": {
+            "title": "Vrachtwagen kopen - Nieuw en gebruikt - BAS World",
+            "url": "https://www.basworld.com/nl/voorraad/bakwagen",
+            "canonicalUrl": "https://www.basworld.com/nl/voorraad/bakwagen",
+            "designSize": "designSize-xl"
+         },
+         "session": {
+            "buttSessionId": "7d2f972a-445b-4fce-82b3-066190e97732",
+            "vendorClickIds": {
+               "google": "",
+               "bing": "",
+               "facebook": "",
+               "linkedIn": ""
+            },
+            "referer": "",
+            "utmParameters": {
+               "source": "",
+               "medium": "",
+               "campaign": "",
+               "term": "",
+               "content": ""
+            }
+         },
+         "client": {
+            "buttClientId": "3413bb19-f3a6-44a1-9c59-db097a7335dc",
+            "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            "vendorClientIds": {
+               "googleAnalytics": "GA1.1.1915037959.1725873110",
+               "bing": "8d77e1206e8b11ef8d4d9b7e5d428829",
+               "facebook": "fb.1.1725043421928.1413336407"
+            },
+            "device": {
+               "type": "",
+               "vendor": "",
+               "model": "",
+               "screenWidth": 1707,
+               "screenHeight": 1067
+            },
+            "operatingSystem": {
+               "name": "Windows",
+               "version": "10"
+            },
+            "browser": {
+               "name": "Chrome",
+               "version": "128.0.0.0",
+               "viewportWidth": 1707,
+               "viewportHeight": 932,
+               "language": "nl-NL",
+               "cookiesEnabled": true,
+               "javaScriptEnabled": true,
+               "doNotTrackEnabled": false
+            },
+            "engine": {
+               "name": "Blink",
+               "version": "128.0.0.0"
+            },
+            "geolocation": {
+               "latitude": "",
+               "longitude": "",
+               "country": "",
+               "region": "",
+               "city": ""
+            }
+         },
+         "user": {
+            "userId": "",
+            "userEmailAddress": "",
+            "personId": "",
+            "personEmailAddress": "",
+            "companyId": "",
+            "companyName": ""
+         }
+      },
+      "event": {
+         "eventName": "view_item_list",
+         "data": {
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "items": [
+               {
+                  "item_id": 70258966,
+                  "item_name": "DAF XG 480 6X2",
+                  "affiliation": "BAS World GmbH",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 0,
+                  "item_variant": "2024",
+                  "price": 118900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70258050,
+                  "item_name": "Volvo FM 260 4X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Volvo",
+                  "item_category": "Bakwagen",
+                  "item_category2": "4X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 1,
+                  "item_variant": "2005",
+                  "price": 25800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70258048,
+                  "item_name": "Scania G440 8X4",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Scania",
+                  "item_category": "Bakwagen",
+                  "item_category2": "8X4",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 2,
+                  "item_variant": "2010",
+                  "price": 39900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70258017,
+                  "item_name": "Volvo FMX 500 6X4",
+                  "affiliation": "Silva-Recycling",
+                  "item_brand": "Volvo",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X4",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 3,
+                  "item_variant": "2019",
+                  "price": 57900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257968,
+                  "item_name": "DAF CF 290 4X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "4X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 4,
+                  "item_variant": "2016",
+                  "price": 25900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257945,
+                  "item_name": "Volvo FH 500 6X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Volvo",
+                  "item_category": "Bakwagen + Aanhangwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 5,
+                  "item_variant": "2018",
+                  "price": 51400,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257892,
+                  "item_name": "MAN TGS 35.510 8X4",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "MAN",
+                  "item_category": "Bakwagen",
+                  "item_category2": "8X4",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 6,
+                  "item_variant": "9999",
+                  "price": 516800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257886,
+                  "item_name": "Scania G420 6X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Scania",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 7,
+                  "item_variant": "9999",
+                  "price": 269900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257878,
+                  "item_name": "MAN TGS 35.520 8X4",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "MAN",
+                  "item_category": "Bakwagen",
+                  "item_category2": "8X4",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 8,
+                  "item_variant": "9999",
+                  "price": 645800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257852,
+                  "item_name": "Scania R500 8X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Scania",
+                  "item_category": "Bakwagen",
+                  "item_category2": "8X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 9,
+                  "item_variant": "9999",
+                  "price": 555800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257623,
+                  "item_name": "DAF XF 480 6X2",
+                  "affiliation": "BAS World GmbH",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 10,
+                  "item_variant": "9999",
+                  "price": 149900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257594,
+                  "item_name": "Mercedes Antos 1839 4X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Mercedes",
+                  "item_category": "Bakwagen",
+                  "item_category2": "4X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 11,
+                  "item_variant": "2014",
+                  "price": 15400,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257548,
+                  "item_name": "DAF XD 450 6X2",
+                  "affiliation": "BAS World GmbH",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 12,
+                  "item_variant": "2024",
+                  "price": 129900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257547,
+                  "item_name": "DAF XD 450 6X2",
+                  "affiliation": "BAS World GmbH",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 13,
+                  "item_variant": "2024",
+                  "price": 129900,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70257358,
+                  "item_name": "Mercedes Actros 2536 6X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Mercedes",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 14,
+                  "item_variant": "2017",
+                  "price": 13800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70256587,
+                  "item_name": "DAF XF 480 6X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 15,
+                  "item_variant": "2020",
+                  "price": 32800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70256527,
+                  "item_name": "Volvo FL 210 4X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "Volvo",
+                  "item_category": "Bakwagen",
+                  "item_category2": "4X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 16,
+                  "item_variant": "2016",
+                  "price": 18400,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70256383,
+                  "item_name": "MAN TGS 41.440 8X4",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "MAN",
+                  "item_category": "Bakwagen",
+                  "item_category2": "8X4",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 17,
+                  "item_variant": "9999",
+                  "price": 103800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70256382,
+                  "item_name": "MAN TGS 33.440 6X4",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "MAN",
+                  "item_category": "Bakwagen",
+                  "item_category2": "6X4",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 18,
+                  "item_variant": "9999",
+                  "price": 99800,
+                  "quantity": 1
+               },
+               {
+                  "item_id": 70256366,
+                  "item_name": "DAF LF55.180 4X2",
+                  "affiliation": "BAS World B.V.",
+                  "item_brand": "DAF",
+                  "item_category": "Bakwagen",
+                  "item_category2": "4X2",
+                  "item_list_id": "product_listing_page",
+                  "item_list_name": "product_listing_page",
+                  "index": 19,
+                  "item_variant": "2012",
+                  "price": 9400,
+                  "quantity": 1
+               }
+            ]
+         },
+         "additionalData": {
+            "eventLabel": "cms=60&lng=nl&slug=1&seoCategory=1&vt=3&includeVt=32&page=1"
+         }
+      }
+   },
+   "eventHeaders": {
+      "entity": "userEvent",
+      "entityKey": "93b74ba8-fc79-4a5d-a598-293921cce743",
+      "eventMainType": "CREATE",
+      "eventSubType": "newUserEvent",
+      "eventTimestamp": "2024-09-16T08:16:05.787Z",
+      "publishedBy": "buttPackage",
+      "policyVersion": "1.0.0"
+   },
+   "gtm.uniqueEventId": 63
+}

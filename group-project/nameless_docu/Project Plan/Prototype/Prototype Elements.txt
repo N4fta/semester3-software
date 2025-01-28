@@ -1,0 +1,56 @@
+From client email:
+
+Live feed of all new events:
+- User from country just connected
+
+Pie chart:
+- Popular products
+
+Trend Graph over x (12) months:
+- Line for sessions
+- Line for sessions per devices
+- Line for sessions per marketing source
+
+
+----------------------------------------------------------------------------------------
+
+Others:
+
+Search & Filter Function
+
+Box1:
+- number of User events
+- number of Users
+- companies count
+- open sessions
+
+
+Geo Map:
+- Users per country
+
+Statistics:
+- How many of each event (Add to Cart, Main page, Sign-up)
+
+Leaderboard:
+- Top Sold items + Stats
+- Top Viewed + Stats
+- Least Viewed + Stats
+- Least Sold + Stats
+
+Pie Charts:
+- Operating Systems
+- Browsers
+- Screen Size
+
+Source Analysis:
+  Source Breakdown:
+    - Google
+    - Facebook
+    - etc.
+  Medium Breakdown:
+    - organic search
+    - paid search
+    - social media
+  Campaign Breakdown:
+    - Campaign A
+    - Campaign B

@@ -1,0 +1,385 @@
+{
+  "event": "bas-user-event",
+  "eventPayload": {
+    "application": {
+      "name": "bas-world-showroom",
+      "version": "1.0.10",
+      "environment": "production"
+    },
+    "context": {
+      "page": {
+        "title": "Trekker kopen | Vrachtwagen trekkers bij BAS World",
+        "url": "https://www.basworld.com/nl/voorraad/trekker",
+        "canonicalUrl": "https://www.basworld.com/nl/voorraad/trekker",
+        "designSize": "designSize-xl"
+      },
+      "session": {
+        "buttSessionId": "4b61dfdc-d462-4fa4-af4a-5ffdb62faa28",
+        "vendorClickIds": {
+          "google": "",
+          "bing": "",
+          "facebook": "",
+          "linkedIn": ""
+        },
+        "referer": "",
+        "utmParameters": {
+          "source": "YouTube",
+          "medium": "",
+          "campaign": "",
+          "term": "",
+          "content": ""
+        }
+      },
+      "client": {
+        "buttClientId": "a7b84968-fe38-4ea9-b986-de115761cb0a",
+        "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+        "vendorClientIds": {
+          "googleAnalytics": "GA1.1.1915037959.1725873110",
+          "bing": "8d77e1206e8b11ef8d4d9b7e5d428829",
+          "facebook": "fb.1.1725043421928.1413336407"
+        },
+        "device": {
+          "type": "",
+          "vendor": "",
+          "model": "",
+          "screenWidth": 1707,
+          "screenHeight": 1067
+        },
+        "operatingSystem": {
+          "name": "Windows",
+          "version": "10"
+        },
+        "browser": {
+          "name": "Chrome",
+          "version": "130.0.0.0",
+          "viewportWidth": 1707,
+          "viewportHeight": 932,
+          "language": "nl-NL",
+          "cookiesEnabled": true,
+          "javaScriptEnabled": true,
+          "doNotTrackEnabled": false
+        },
+        "engine": {
+          "name": "Blink",
+          "version": "130.0.0.0"
+        },
+        "geolocation": {
+          "latitude": "",
+          "longitude": "",
+          "country": "",
+          "region": "",
+          "city": ""
+        }
+      },
+      "user": {
+        "userId": "",
+        "userEmailAddress": "",
+        "personId": "",
+        "personEmailAddress": "",
+        "companyId": "",
+        "companyName": ""
+      }
+    },
+    "event": {
+      "eventName": "view_item_list",
+      "data": {
+        "item_list_id": "product_listing_page",
+        "item_list_name": "product_listing_page",
+        "items": [
+          {
+            "item_id": 70260932,
+            "item_name": "Volvo FH 460 4X2",
+            "affiliation": "BAS Truck Center B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 0,
+            "item_variant": "9999",
+            "price": 107900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260929,
+            "item_name": "Volvo FH 460 4X2",
+            "affiliation": "BAS Truck Center B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 1,
+            "item_variant": "9999",
+            "price": 107900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260882,
+            "item_name": "Iveco Stralis 460 4X2 Mega",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Iveco",
+            "item_category": "Trekker",
+            "item_category2": "4X2 Mega",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 2,
+            "item_variant": "2019",
+            "price": 15900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260862,
+            "item_name": "Iveco Stralis 480 6X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Iveco",
+            "item_category": "Trekker",
+            "item_category2": "6X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 3,
+            "item_variant": "2017",
+            "price": 24900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260804,
+            "item_name": "DAF XG 480 4X2 Mega",
+            "affiliation": "BTS GmbH & Co KG (Dortmund)",
+            "item_brand": "DAF",
+            "item_category": "Trekker",
+            "item_category2": "4X2 Mega",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 4,
+            "item_variant": "9999",
+            "price": 99900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260767,
+            "item_name": "DAF XF 530 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "DAF",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 5,
+            "item_variant": "2021",
+            "price": 38900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260766,
+            "item_name": "MAN TGS 26.500 6X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "MAN",
+            "item_category": "Trekker",
+            "item_category2": "6X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 6,
+            "item_variant": "2020",
+            "price": 189900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260750,
+            "item_name": "Volvo FH 500 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 7,
+            "item_variant": "2016",
+            "price": 28900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260749,
+            "item_name": "Volvo FH 500 4X2 Mega",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2 Mega",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 8,
+            "item_variant": "2016",
+            "price": 27900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260748,
+            "item_name": "Volvo FH 500 4X2 Mega",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2 Mega",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 9,
+            "item_variant": "2016",
+            "price": 26900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260747,
+            "item_name": "Volvo FH 420 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 10,
+            "item_variant": "2016",
+            "price": 25900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260743,
+            "item_name": "Volvo FH 420 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 11,
+            "item_variant": "2016",
+            "price": 24400,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260737,
+            "item_name": "Scania R460 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Scania",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 12,
+            "item_variant": "9999",
+            "price": 111900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260621,
+            "item_name": "Volvo FH 420 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 13,
+            "item_variant": "2014",
+            "price": 25900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260535,
+            "item_name": "MAN TGS 18.440 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "MAN",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 14,
+            "item_variant": "2015",
+            "price": 12400,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260526,
+            "item_name": "DAF XF 480 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "DAF",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 15,
+            "item_variant": "2019",
+            "price": 28900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70260518,
+            "item_name": "DAF XG 480 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "DAF",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 16,
+            "item_variant": "2022",
+            "price": 64900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70262710,
+            "item_name": "DAF XF 440 4X2 Mega",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "DAF",
+            "item_category": "Trekker",
+            "item_category2": "4X2 Mega",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 17,
+            "item_variant": "2013",
+            "price": 10900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70262647,
+            "item_name": "Volvo FH 500 6X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Volvo",
+            "item_category": "Trekker",
+            "item_category2": "6X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 18,
+            "item_variant": "2014",
+            "price": 33900,
+            "quantity": 1
+          },
+          {
+            "item_id": 70262632,
+            "item_name": "Mercedes Actros 1843 4X2",
+            "affiliation": "BAS World B.V.",
+            "item_brand": "Mercedes",
+            "item_category": "Trekker",
+            "item_category2": "4X2",
+            "item_list_id": "product_listing_page",
+            "item_list_name": "product_listing_page",
+            "index": 19,
+            "item_variant": "2019",
+            "price": 32900,
+            "quantity": 1
+          }
+        ]
+      },
+      "additionalData": {
+        "eventLabel": "cms=60&lng=nl&slug=1&seoCategory=1&vt=7&page=1"
+      }
+    }
+  },
+  "eventHeaders": {
+    "entity": "userEvent",
+    "entityKey": "30603f1b-ed8e-4fc8-97ff-748d400bc6e2",
+    "eventMainType": "CREATE",
+    "eventSubType": "newUserEvent",
+    "eventTimestamp": "2024-11-11T08:12:28.360Z",
+    "publishedBy": "buttPackage",
+    "policyVersion": "1.0.0"
+  }
+}

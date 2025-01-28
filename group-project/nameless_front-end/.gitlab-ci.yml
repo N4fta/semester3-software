@@ -1,0 +1,29 @@
+stages:
+  - build
+  - docker
+
+image:
+  name: docker:23.0.5
+
+services:
+  - docker:23.0.5-dind
+
+build-app:
+  stage: build
+  image: node:18-alpine
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 week
+
+docker-build:
+  stage: docker
+  dependencies:
+    - build-app
+  script:
+    - echo $DOCKER_PAT | docker login -u n4fta --password-stdin
+    - docker build -t n4fta/nameless:frontend .
+    - docker push n4fta/nameless:frontend

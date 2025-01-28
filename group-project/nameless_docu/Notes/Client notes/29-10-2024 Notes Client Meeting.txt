@@ -1,0 +1,19 @@
+SPRINT-B Notes:
+- Add a default dashboard
+- Focus more on functionality (MVP)
+- Bring the demo to life, add buttons that update data
+
+ 
+
+
+Presentation:
+- SCRUM is AN Agile Framework, not the only one
+- Daily Scrum meetings 15min
+- Fun retrospectives
+- Scrum master position
+- DoR (Definition of Ready)
+- DoD (Definition of Done) - User Stories, Acceptance Criteria, Test Cases (for edge case)
+- Daily JIRA updates
+- Review Column (high priority)
+- Story Mapping & Slicing
+- Focus more on value

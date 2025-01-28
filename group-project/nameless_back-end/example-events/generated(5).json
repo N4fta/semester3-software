@@ -1,0 +1,100 @@
+{
+  "event": "bas-user-event",
+  "eventHeaders": {
+    "entity": "userEvent",
+    "entityKey": "UUID5678",
+    "eventMainType": "UPDATE",
+    "eventSubType": "updateUserEvent",
+    "eventTimestamp": "2022-01-02T13:00:00.000Z",
+    "publishedBy": "buttPackage",
+    "policyVersion": "1.0.0"
+  },
+  "eventPayload": {
+    "application": {
+      "name": "My Application",
+      "version": "1.0.1",
+      "environment": "staging"
+    },
+    "context": {
+      "page": {
+        "title": "About Page",
+        "designSize": "designSize-lg",
+        "url": "https://example.com/about",
+        "canonicalUrl": "https://example.com/about"
+      },
+      "session": {
+        "buttSessionId": "session5678",
+        "vendorClickIds": {
+          "google": "clickId9012",
+          "bing": "clickId1111",
+          "facebook": "clickId1234",
+          "linkedIn": "clickId5678"
+        },
+        "referer": "https://referer.com/about",
+        "utmParameters": {
+          "source": "Google",
+          "medium": "utmMedium2",
+          "campaign": "utmCampaign2",
+          "term": "utmTerm2",
+          "content": "utmContent2"
+        }
+      },
+      "client": {
+        "buttClientId": "client5678",
+        "vendorClientIds": {
+          "googleAnalytics": "clientId5678",
+          "bing": "clientId9012",
+          "facebook": "clientId1111"
+        },
+        "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+        "device": {
+          "type": "desktop",
+          "vendor": "HP",
+          "model": "HP Pavilion",
+          "screenWidth": 1920,
+          "screenHeight": 1080
+        },
+        "operatingSystem": {
+          "name": "MacOs",
+          "version": "10.5"
+        },
+        "browser": {
+          "name": "Firefox",
+          "version": "75.0.3770.100",
+          "viewportWidth": 1920,
+          "viewportHeight": 1080,
+          "language": "en-US",
+          "cookiesEnabled": true,
+          "javaScriptEnabled": true,
+          "doNotTrackEnabled": false
+        },
+        "engine": {
+          "name": "Blink",
+          "version": "537.36"
+        },
+        "geolocation": {
+          "latitude": "37.7749",
+          "longitude": "-122.4194",
+          "country": "Germany",
+          "region": "County Antrim",
+          "city": "Belfast"
+        }
+      },
+      "user": {
+        "userId": "user5678",
+        "userEmailAddress": "user2@example.com",
+        "personId": "person5678",
+        "personEmailAddress": "person2@example.com",
+        "companyId": "company5678",
+        "companyName": "Example Company 2"
+      }
+    },
+    "event": {
+      "eventName": "element_visibility",
+      "data": {
+        "eventName": "about-element"
+      },
+      "additionalData": {}
+    }
+  }
+}

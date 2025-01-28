@@ -1,0 +1,34 @@
+19/11/2024 - Summary
+
+- Notes from our presentation:
+	- AWS not Azure
+	- Filtering options (endpoints and in widgets)
+	- Live Feed
+	- Polish
+	- Time filter for whole dashboard
+	- Do we NEED web sockets?
+	- Should we keep the testing button?
+	- Generator Test button
+	- Docker Compose
+	- Send Walking skeleton and other documentation
+	- **We should send the code at the end of the project**
+
+- Notes from the client meeting:
+	- The way data is presented are okay
+	- Better generator (x1-1000)/show incoming events
+	- Walking skeleton is too technical
+	- Presentation on how we build the app, our struggles, etc. How it works
+		- We need to show you can trust our logic
+		- Add event is a black box (Explain it)
+		- Generator should show events generating
+		- 
+	- Copy/Paste data from BAS website as Demo
+	- it's better to sort sidebar based on topic
+	- Client needs to trust the application and the data
+	- If we host everything in Docker and AWS, notes would be appreciated
+	- 
+	- End goal, make it come alive for sales people
+		- Simple graphs are better for understanding by business people
+		- So we should have more graphs that could be interesting sales people
+	- We shouldn't focus on it too much
+	- Architectural Document would be good

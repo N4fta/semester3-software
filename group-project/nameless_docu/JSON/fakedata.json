@@ -1,0 +1,118 @@
+{
+    "event": "bas-user-event",
+    "eventHeaders": {
+        "entity": "eventPayload.entity",
+        "entityKey": "eventPayload.entityKey",
+        "eventMainType": "eventPayload.event.eventMainType",
+        "eventSubType": "eventPayload.event.eventSubType",
+        "eventTimestamp": "1916-05-30T09:51:44.0Z",
+        "publishedBy": "eventPayload.publishedBy",
+        "policyVersion": "eventPayload.policyVersion"
+    },
+    "eventPayload": {
+        "application": {
+            "name": "eventPayload.application.name",
+            "version": "eventPayload.application.version",
+            "environment": "eventPayload.application.environment"
+        },
+        "context": {
+            "page": {
+                "title": "eventPayload.context.page.title",
+                "designSize": "eventPayload.context.page.design.size",
+                "url": "eventPayload.context.page.design.url",
+                "canonicalUrl": "eventPayload.context.page.design.canonicalUrl"
+            },
+            "session": {
+                "buttSessionId": "eventPayload.context.session.buttSessionId",
+                "vendorClickIds": {
+                    "google": "eventPayload.context.session.vendorClickIds.google",
+                    "bing": "eventPayload.context.session.vendorClickIds.bing",
+                    "facebook": "eventPayload.context.session.vendorClickIds.facebook",
+                    "linkedIn": "eventPayload.context.session.vendorClickIds.linkedIn"
+                },
+                "referer": "eventPayload.context.session.referer",
+                "utmParameters": {
+                    "source": "eventPayload.context.session.utmParameters.source",
+                    "medium": "eventPayload.context.session.utmParameters.medium",
+                    "campaign": "eventPayload.context.session.utmParameters.campaign",
+                    "term": "eventPayload.context.session.utmParameters.term",
+                    "content": "eventPayload.context.session.utmParameters.content"
+                }
+            },
+            "client": {
+                "buttClientId": "eventPayload.context.client.buttClientId",
+                "vendorClientIds": {
+                    "googleAnalytics": "eventPayload.context.client.vendorClientIds.googleAnalytics",
+                    "bing": "eventPayload.context.client.vendorClientIds.bing",
+                    "facebook": "eventPayload.context.session.vendorClickIds.facebook"
+                },
+                "rawUserAgent": "eventPayload.context.client.rawUserAgent",
+                "device": {
+                    "type": "eventPayload.context.client.device.type",
+                    "vendor": "eventPayload.context.client.device.vendor",
+                    "model": "eventPayload.context.client.device.model",
+                    "screenWidth": 1,
+                    "screenHeight": 2
+                },
+                "operatingSystem": {
+                    "name": "eventPayload.context.client.operatingSystem.name",
+                    "version": "eventPayload.context.client.operatingSystem.version"
+                },
+                "browser": {
+                    "name": "eventPayload.context.client.browser.name",
+                    "version": "eventPayload.context.client.browser.version",
+                    "viewportWidth": 3,
+                    "viewportHeight": 4,
+                    "language": "eventPayload.context.client.browser.language",
+                    "cookiesEnabled": true,
+                    "javaScriptEnabled": false,
+                    "doNotTrackEnabled": true
+                },
+                "engine": {
+                    "name": "eventPayload.context.client.engine.name",
+                    "version": "eventPayload.context.client.engine.version"
+                },
+                "geolocation": {
+                    "latitude": "eventPayload.context.client.geolocation.latitude",
+                    "longitude": "eventPayload.context.client.geolocation.longitude",
+                    "country": "eventPayload.context.client.geolocation.country",
+                    "region": "eventPayload.context.client.geolocation.region",
+                    "city": "eventPayload.context.client.geolocation.city"
+                }
+            },
+            "user": {
+                "userId": "eventPayload.context.user.userId",
+                "userEmailAddress": "eventPayload.context.user.userEmailAddress",
+                "personId": "eventPayload.context.user.personId",
+                "personEmailAddress": "eventPayload.context.user.personEmailAddress",
+                "companyId": "eventPayload.context.user.companyId",
+                "companyName": "eventPayload.context.user.companyName"
+            }
+        },
+        "event": {
+            "eventName": "eventPayload.event.eventName",
+            "data": {
+                "item_list_id": "eventPayload.event.data.item_list_id",
+                "item_list_name": "eventPayload.event.data.item_list_name",
+                "items": [
+                    {
+                        "item_id": 5,
+                        "item_name": "eventPayload.event.data.items.item_name",
+                        "affiliation": "eventPayload.event.data.items.affiliation",
+                        "item_brand": "eventPayload.event.data.items.item_brand",
+                        "item_category": "eventPayload.event.data.items.item_category",
+                        "item_category2": "eventPayload.event.data.items.item_category2",
+                        "item_list_name": "eventPayload.event.data.item_list_name",
+                        "index": 6,
+                        "item_variant": "eventPayload.event.data.items.item_variant",
+                        "price": 7,
+                        "quantity": 8
+                    }
+                ]
+            },
+            "additionalData": {
+                "nisi__2": 9
+            }
+        }
+    }
+}

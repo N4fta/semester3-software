@@ -1,0 +1,43 @@
+# Disable the Gradle daemon for Continuous Integration servers as correctness
+# is usually a priority over speed in CI environments. Using a fresh
+# runtime for each build is more reliable since the runtime is completely
+# isolated from any previous builds.
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+
+default:
+  image: gradle:8.10.1-jdk17
+
+services:
+  - docker:23.0.5-dind
+
+stages:
+  - build
+  - test
+  - docker
+
+build:
+  stage: build
+  script:
+    - chmod +x gradlew
+    - ./gradlew clean assemble
+  artifacts:
+    paths:
+      - build/libs/
+    expire_in: 1 hour
+
+test:
+  stage: test
+  script:
+    - chmod +x gradlew
+    - ./gradlew test
+
+docker-build:
+  stage: docker
+  image: docker:latest
+  dependencies:
+    - build
+  script:
+    - echo $DOCKER_PAT | docker login -u n4fta --password-stdin
+    - docker build -t n4fta/nameless:backend .
+    - docker push n4fta/nameless:backend

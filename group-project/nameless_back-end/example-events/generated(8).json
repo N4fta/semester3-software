@@ -1,0 +1,195 @@
+{
+    "event": "bas-user-event",
+    "eventHeaders": {
+      "entity": "userEvent",
+      "entityKey": "UUID1234",
+      "eventMainType": "UPDATE",
+      "eventSubType": "updateUserEvent",
+      "eventTimestamp": "2024-11-11T09:15:00.000Z",
+      "publishedBy": "appPackage",
+      "policyVersion": "1.0.0"
+    },
+    "eventPayload": {
+      "application": {
+        "name": "My Application",
+        "version": "2.3.5",
+        "environment": "production"
+      },
+      "context": {
+        "page": {
+          "title": "Dashboard",
+          "designSize": "designSize-md",
+          "url": "https://example.com/dashboard",
+          "canonicalUrl": "https://example.com/dashboard"
+        },
+        "session": {
+          "buttSessionId": "session1234",
+          "vendorClickIds": {
+            "google": "clickId1234",
+            "bing": "clickId5678",
+            "facebook": "clickId4321"
+          },
+          "referer": "https://referer.com/dashboard",
+          "utmParameters": {
+            "source": "Google",
+            "medium": "utmMedium1",
+            "campaign": "utmCampaign1",
+            "term": "utmTerm1",
+            "content": "utmContent1"
+          }
+        },
+        "client": {
+          "buttClientId": "client1234",
+          "vendorClientIds": {
+            "googleAnalytics": "clientId1234",
+            "bing": "clientId5678",
+            "facebook": "clientId9012"
+          },
+          "rawUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.100 Safari/537.36",
+          "device": {
+            "type": "desktop",
+            "vendor": "Dell",
+            "model": "XPS 15",
+            "screenWidth": 2560,
+            "screenHeight": 1440
+          },
+          "operatingSystem": {
+            "name": "Windows",
+            "version": "11.0"
+          },
+          "browser": {
+            "name": "Chrome",
+            "version": "118.0.5993.100",
+            "viewportWidth": 2560,
+            "viewportHeight": 1440,
+            "language": "en-US",
+            "cookiesEnabled": true,
+            "javaScriptEnabled": true,
+            "doNotTrackEnabled": false
+          },
+          "engine": {
+            "name": "Blink",
+            "version": "5993.100"
+          },
+          "geolocation": {
+            "latitude": "48.8566",
+            "longitude": "2.3522",
+            "country": "France",
+            "region": "Île-de-France",
+            "city": "Paris"
+          }
+        },
+        "user": {
+          "userId": "user1234",
+          "userEmailAddress": "user@example.com",
+          "personId": "person1234",
+          "personEmailAddress": "person@example.com",
+          "companyId": "company1234",
+          "companyName": "Example Company"
+        }
+      },
+      "event": {
+        "eventName": "button_click",
+        "data": {
+          "eventName": "dashboard-button"
+        }
+      }
+    }
+  },
+  {
+    "event": "bas-user-event",
+    "eventHeaders": {
+      "entity": "userEvent",
+      "entityKey": "UUID5678",
+      "eventMainType": "UPDATE",
+      "eventSubType": "updateUserEvent",
+      "eventTimestamp": "2024-11-12T14:45:00.000Z",
+      "publishedBy": "dataTool",
+      "policyVersion": "1.0.0"
+    },
+    "eventPayload": {
+      "application": {
+        "name": "Insights Tracker",
+        "version": "3.1.2",
+        "environment": "staging"
+      },
+      "context": {
+        "page": {
+          "title": "User Stats",
+          "designSize": "designSize-xl",
+          "url": "https://example.com/stats",
+          "canonicalUrl": "https://example.com/stats"
+        },
+        "session": {
+          "buttSessionId": "session5678",
+          "vendorClickIds": {
+            "google": "clickId2345",
+            "facebook": "clickId6789",
+            "linkedIn": "clickId8765"
+          },
+          "referer": "https://referer.com/stats",
+          "utmParameters": {
+            "source": "LinkedIn",
+            "medium": "utmMedium3",
+            "campaign": "utmCampaign3",
+            "term": "utmTerm3",
+            "content": "utmContent3"
+          }
+        },
+        "client": {
+          "buttClientId": "client5678",
+          "vendorClientIds": {
+            "googleAnalytics": "clientId7890",
+            "bing": "clientId3456"
+          },
+          "rawUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36",
+          "device": {
+            "type": "laptop",
+            "vendor": "Apple",
+            "model": "MacBook Pro",
+            "screenWidth": 3072,
+            "screenHeight": 1920
+          },
+          "operatingSystem": {
+            "name": "MacIntel",
+            "version": "12.3"
+          },
+          "browser": {
+            "name": "Safari",
+            "version": "16.1",
+            "viewportWidth": 3072,
+            "viewportHeight": 1920,
+            "language": "en-GB",
+            "cookiesEnabled": true,
+            "javaScriptEnabled": true,
+            "doNotTrackEnabled": false
+          },
+          "engine": {
+            "name": "WebKit",
+            "version": "537.36"
+          },
+          "geolocation": {
+            "latitude": "51.5074",
+            "longitude": "-0.1278",
+            "country": "United Kingdom",
+            "region": "England",
+            "city": "London"
+          }
+        },
+        "user": {
+          "userId": "user5678",
+          "userEmailAddress": "user2@example.com",
+          "personId": "person5678",
+          "personEmailAddress": "person2@example.com",
+          "companyId": "company5678",
+          "companyName": "Example Company 2"
+        }
+      },
+      "event": {
+        "eventName": "form_submission",
+        "data": {
+          "eventName": "stats-form"
+        }
+      }
+    }
+  }

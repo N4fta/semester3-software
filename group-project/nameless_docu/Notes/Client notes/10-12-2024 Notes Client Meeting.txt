@@ -1,0 +1,6 @@
+10/12/2024
+- The code we have now is enough for the project
+- The client will ask about the CORS
+- Name is better for saving layout
+- The link is the best for dashboard layout
+- Client will ask about documentation

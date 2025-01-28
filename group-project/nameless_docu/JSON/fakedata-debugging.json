@@ -1,0 +1,100 @@
+{
+    "event": "bas-user-event",
+    "eventHeaders": {
+        "entity": "userEvent",
+        "entityKey": "eventPayload.entityKey",
+        "eventMainType": "CREATE",
+        "eventSubType": "newUserEvent",
+        "eventTimestamp": "1916-05-30T09:51:44.0Z",
+        "publishedBy": "buttPackage",
+        "policyVersion": "eventPayload.policyVersion"
+    },
+    "eventPayload": {
+        "application": {
+            "name": "eventPayload.application.name",
+            "version": "eventPayload.application.version",
+            "environment": "eventPayload.application.environment"
+        },
+        "context": {
+            "page": {
+                "title": "eventPayload.context.page.title",
+                "designSize": "designSize-xl",
+                "url": "https://www.basworld.com/",
+                "canonicalUrl": "https://www.basworld.com/"
+            },
+            "session": {
+                "buttSessionId": "eventPayload.context.session.buttSessionId",
+                "vendorClickIds": {
+                    "google": "eventPayload.context.session.vendorClickIds.google",
+                    "bing": "eventPayload.context.session.vendorClickIds.bing",
+                    "facebook": "eventPayload.context.session.vendorClickIds.facebook",
+                    "linkedIn": "eventPayload.context.session.vendorClickIds.linkedIn"
+                },
+                "referer": "eventPayload.context.session.referer",
+                "utmParameters": {
+                    "source": "eventPayload.context.session.utmParameters.source",
+                    "medium": "eventPayload.context.session.utmParameters.medium",
+                    "campaign": "eventPayload.context.session.utmParameters.campaign",
+                    "term": "eventPayload.context.session.utmParameters.term",
+                    "content": "eventPayload.context.session.utmParameters.content"
+                }
+            },
+            "client": {
+                "buttClientId": "eventPayload.context.client.buttClientId",
+                "vendorClientIds": {
+                    "googleAnalytics": "eventPayload.context.client.vendorClientIds.googleAnalytics",
+                    "bing": "eventPayload.context.client.vendorClientIds.bing",
+                    "facebook": "eventPayload.context.session.vendorClickIds.facebook"
+                },
+                "rawUserAgent": "eventPayload.context.client.rawUserAgent",
+                "device": {
+                    "type": "eventPayload.context.client.device.type",
+                    "vendor": "eventPayload.context.client.device.vendor",
+                    "model": "eventPayload.context.client.device.model",
+                    "screenWidth": 1920,
+                    "screenHeight": 1080
+                },
+                "operatingSystem": {
+                    "name": "eventPayload.context.client.operatingSystem.name",
+                    "version": "eventPayload.context.client.operatingSystem.version"
+                },
+                "browser": {
+                    "name": "eventPayload.context.client.browser.name",
+                    "version": "eventPayload.context.client.browser.version",
+                    "viewportWidth": 3,
+                    "viewportHeight": 4,
+                    "language": "eventPayload.context.client.browser.language",
+                    "cookiesEnabled": true,
+                    "javaScriptEnabled": false,
+                    "doNotTrackEnabled": true
+                },
+                "engine": {
+                    "name": "eventPayload.context.client.engine.name",
+                    "version": "eventPayload.context.client.engine.version"
+                },
+                "geolocation": {
+                    "latitude": "eventPayload.context.client.geolocation.latitude",
+                    "longitude": "eventPayload.context.client.geolocation.longitude",
+                    "country": "eventPayload.context.client.geolocation.country",
+                    "region": "eventPayload.context.client.geolocation.region",
+                    "city": "eventPayload.context.client.geolocation.city"
+                }
+            },
+            "user": {
+                "userId": "eventPayload.context.user.userId",
+                "userEmailAddress": "user@basworld.com",
+                "personId": "eventPayload.context.user.personId",
+                "personEmailAddress": "user@basworld.com",
+                "companyId": "eventPayload.context.user.companyId",
+                "companyName": "eventPayload.context.user.companyName"
+            }
+        },
+        "event": {
+            "eventName": "OtherEvent",
+            "data": {
+                "eventName": "other",
+                "additionalData": "eventPayload.event.data.additionalData"
+            }
+        }
+    }
+}

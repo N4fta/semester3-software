@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    h2 {
+      color: #3498db;
+    }
+
+    input[type="range"],
+    input[type="number"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #2ecc71;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #27ae60;
+    }
+
+    #sliderLabel {
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e6f3ff;
+    }
+
+    @media screen and (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Event Generator</h1>
+  <h2 id="totalEvents">Total events posted: <b>0</b></h2>
+  <p>Delay:</p>
+  <input type="range" min="0.1" max="5" id="slider" oninput="changeInput()" step="0.1" name="delay">
+  <p id="sliderLabel"></p>
+  <p>Number of events:</p>
+  <input type="number" min="1" max="10000" value="1" id="eventsNumber">
+  <button onclick="pressPostEventsButton()">Generate and Post Events</button>
+
+  <table id="eventsTable">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Website</th>
+        <th>Source</th>
+        <th>Type of device</th>
+        <th>Operating system</th>
+        <th>Browser</th>
+        <th>Language</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be dynamically added here -->
+    </tbody>
+  </table>
+</body>
+<script>
+  var current_country_index = 0;
+  const slider = document.getElementById("slider");
+  const sliderLabel = document.getElementById("sliderLabel");
+  const eventsNumberInput = document.getElementById("eventsNumber");
+  //const eventsContainer = document.getElementById("eventsContainer");
+  const totalEventsLabel = document.getElementById("totalEvents");
+  const eventsTable = document.getElementById("eventsTable");
+  const tbody = eventsTable.querySelector("tbody")
+  var totalEventCount = 0;
+  const countries = [
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
+    "Argentina",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belarus",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bolivia",
+    "Bosnia and Herzegovina",
+    "Botswana",
+    "Brazil",
+    "Brunei",
+    "Bulgaria",
+    "Burkina Faso",
+    "Burundi",
+    "Cabo Verde",
+    "Cambodia",
+    "Cameroon",
+    "Canada",
+    "Central African Republic",
+    "Chad",
+    "Chile",
+    "China",
+    "Colombia",
+    "Comoros",
+    "Cook Islands",
+    "Costa Rica",
+    "Ivory Coast",
+    "Croatia",
+    "Cuba",
+    "Cyprus",
+    "Czech Republic",
+    "CD",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Equatorial Guinea",
+    "Eritrea",
+    "Estonia",
+    "Eswatini",
+    "Ethiopia",
+    "Fiji",
+    "Finland",
+    "France",
+    "Gabon",
+    "Gambia",
+    "Georgia",
+    "Germany",
+    "Ghana",
+    "Greece",
+    "Grenada",
+    "Guatemala",
+    "Guinea",
+    "Guinea-Bissau",
+    "Guyana",
+    "Haiti",
+    "Honduras",
+    "Hungary",
+    "Iceland",
+    "India",
+    "Indonesia",
+    "Iran",
+    "Iraq",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Jamaica",
+    "Japan",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kiribati",
+    "Korea",
+    "XK",
+    "Kuwait",
+    "Kyrgyzstan",
+    "Laos",
+    "Latvia",
+    "Lebanon",
+    "Lesotho",
+    "Liberia",
+    "Libya",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Madagascar",
+    "Malawi",
+    "Malaysia",
+    "Maldives",
+    "Mali",
+    "Malta",
+    "Marshall Islands",
+    "Mauritania",
+    "Mauritius",
+    "Mexico",
+    "Micronesia",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Montenegro",
+    "Morocco",
+    "Mozambique",
+    "Namibia",
+    "Nauru",
+    "Nepal",
+    "Netherlands",
+    "New Zealand",
+    "Nicaragua",
+    "Niger",
+    "Nigeria",
+    "Niue",
+    "Macedonia",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palau",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Peru",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Qatar",
+    "South Korea",
+    "CG",
+    "Romania",
+    "Russia",
+    "Rwanda",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "Samoa",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Saudi Arabia",
+    "Senegal",
+    "Serbia",
+    "Seychelles",
+    "Sierra Leone",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "Solomon Islands",
+    "Somalia",
+    "South Africa",
+    "SS",
+    "Spain",
+    "Sri Lanka",
+    "Sudan",
+    "Suriname",
+    "Sweden",
+    "Switzerland",
+    "Syria",
+    "Tajikistan",
+    "Tanzania",
+    "Thailand",
+    "Timor-Leste",
+    "Togo",
+    "Tonga",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "Turkey",
+    "Turkmenistan",
+    "Tuvalu",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Uruguay",
+    "Uzbekistan",
+    "Vanuatu",
+    "Venezuela",
+    "Vietnam",
+    "Yemen",
+    "Zambia",
+    "Zimbabwe",
+    "Greenland",
+    "New Caledonia",
+    "Isle of Man",
+    "Falkland Islands",
+    "Western Sahara",
+    "Bhutan",
+    "North Korea",
+    "French Guiana",
+    "Swaziland",
+    "Taiwan",
+    "Myanmar",
+    "Puerto Rico",
+    "TL",
+    "SJ",
+  ];
+
+  languages = [
+    "af",
+    "sq",
+    "ar-dz",
+    "ar-bh",
+    "ar-eg",
+    "ar-iq",
+    "ar-jo",
+    "ar-kw",
+    "ar-lb",
+    "ar-ly",
+    "ar-ma",
+    "ar-om",
+    "ar-qa",
+    "ar-sa",
+    "ar-sy",
+    "ar-tn",
+    "ar-ae",
+    "ar-ye",
+    "eu",
+    "be",
+    "bg",
+    "ca",
+    "zh-hk",
+    "zh-cn",
+    "zh-sg",
+    "zh-tw",
+    "hr",
+    "cs",
+    "da",
+    "nl-be",
+    "nl",
+    "en",
+    "en-au",
+    "en-bz",
+    "en-ca",
+    "en-ie",
+    "en-jm",
+    "en-nz",
+    "en-za",
+    "en-tt",
+    "en-gb",
+    "en-us",
+    "et",
+    "fo",
+    "fa",
+    "fi",
+    "fr-be",
+    "fr-ca",
+    "fr-lu",
+    "fr",
+    "fr-ch",
+    "gd",
+    "de-at",
+    "de-li",
+    "de-lu",
+    "de",
+    "de-ch",
+    "el",
+    "he",
+    "hi",
+    "hu",
+    "is",
+    "id",
+    "ga",
+    "it",
+    "it-ch",
+    "ja",
+    "ko",
+    "ko",
+    "ku",
+    "lv",
+    "lt",
+    "mk",
+    "ml",
+    "ms",
+    "mt",
+    "no",
+    "nb",
+    "nn",
+    "pl",
+    "pt-br",
+    "pt",
+    "pa",
+    "rm",
+    "ro",
+    "ro-md",
+    "ru",
+    "ru-md",
+    "sr",
+    "sk",
+    "sl",
+    "sb",
+    "es-ar",
+    "es-bo",
+    "es-cl",
+    "es-co",
+    "es-cr",
+    "es-do",
+    "es-ec",
+    "es-sv",
+    "es-gt",
+    "es-hn",
+    "es-mx",
+    "es-ni",
+    "es-pa",
+    "es-py",
+    "es-pe",
+    "es-pr",
+    "es",
+    "es-uy",
+    "es-ve",
+    "sv",
+    "sv-fi",
+    "th",
+    "ts",
+    "tn",
+    "tr",
+    "uk",
+    "ur",
+    "ve",
+    "vi",
+    "cy",
+    "xh",
+    "ji",
+    "zu"
+  ]
+
+  function generateRandomEvents(numEventsPerDay) {
+    const operatingSystems = [
+      "Windows",
+      "Linux",
+      "Android",
+      "iOS",
+      "MacOs",
+    ];
+    const browsers = ["Firefox", "Chrome", "Safari", "Edge", "Opera"];
+
+
+    const deviceTypes = ["desktop", "laptop", "tablet", "mobile"];
+    const websites = ["https://www.youtube.com/watch?v=dQw4w9WgXcQ", "https://www.example.com", "https://www.basworld.com/", "https://www.lorem-ipsum.com", "https://www.fontys.nl"];
+    const marketing_sources = ["Facebook", "Gmail", "Social", "Direct", "Organic"];
+    const website_names = ["About page", "Main page", "Contact page", "Category page", "Payment page", "Login page"]
+
+
+    function getRandomElement(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function getRandomTimestamp(date) {
+      const hour = Math.floor(Math.random() * 24)
+        .toString()
+        .padStart(2, "0");
+      const minute = Math.floor(Math.random() * 60)
+        .toString()
+        .padStart(2, "0");
+      const second = Math.floor(Math.random() * 60)
+        .toString()
+        .padStart(2, "0");
+      return `${date}T${hour}:${minute}:${second}.000Z`;
+    }
+
+    const startDateObj = new Date();
+    const endDateObj = new Date();
+    const events = [];
+
+    for (
+      let d = startDateObj;
+      d <= endDateObj;
+      d.setDate(d.getDate() + 1)
+    ) {
+      for (let i = 0; i < numEventsPerDay; i++) {
+        const formattedDate = d.toISOString().split("T")[0];
+        const website = getRandomElement(websites);
+        const event = {
+          event: "bas-user-event",
+          eventHeaders: {
+            entity: "userEvent",
+            entityKey: `UUID${Math.floor(Math.random() * 10000)}`,
+            eventMainType: "UPDATE",
+            eventSubType: "updateUserEvent",
+            eventTimestamp: new Date(),
+            publishedBy: "buttPackage",
+            policyVersion: "1.0.0",
+          },
+          eventPayload: {
+            application: {
+              name: "My Application",
+              version: "1.0.1",
+              environment: "staging",
+            },
+            context: {
+              page: {
+                title: getRandomElement(website_names),
+                designSize: "designSize-lg",
+                url: website,
+                canonicalUrl: website,
+              },
+              session: {
+                buttSessionId: `session${Math.floor(
+                  Math.random() * 10000
+                )}`,
+                vendorClickIds: {
+                  google: `clickId${Math.floor(Math.random() * 10000)}`,
+                  bing: `clickId${Math.floor(Math.random() * 10000)}`,
+                  facebook: `clickId${Math.floor(Math.random() * 10000)}`,
+                  linkedIn: `clickId${Math.floor(Math.random() * 10000)}`,
+                },
+                referer: "https://referer.com/about",
+                utmParameters: {
+                  source: getRandomElement(marketing_sources),
+                  medium: "utmMedium2",
+                  campaign: "utmCampaign2",
+                  term: "utmTerm2",
+                  content: "utmContent2",
+                },
+              },
+              client: {
+                buttClientId: `client${Math.floor(Math.random() * 10000)}`,
+                vendorClientIds: {
+                  googleAnalytics: `clientId${Math.floor(
+                    Math.random() * 10000
+                  )}`,
+                  bing: `clientId${Math.floor(Math.random() * 10000)}`,
+                  facebook: `clientId${Math.floor(Math.random() * 10000)}`,
+                },
+                rawUserAgent:
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36",
+                device: {
+                  type: getRandomElement(deviceTypes),
+                  vendor: "HP",
+                  model: "HP Pavilion",
+                  screenWidth: 1920,
+                  screenHeight: 1080,
+                },
+                operatingSystem: {
+                  name: getRandomElement(operatingSystems),
+                  version: `${Math.floor(Math.random() * 15) + 1}.0`,
+                },
+                browser: {
+                  name: getRandomElement(browsers),
+                  version: `75.0.${Math.floor(Math.random() * 1000)}.100`,
+                  viewportWidth: 1920,
+                  viewportHeight: 1080,
+                  language: getRandomElement(languages),
+                  cookiesEnabled: Math.random() < 0.5,
+                  javaScriptEnabled: Math.random() < 0.5,
+                  doNotTrackEnabled: false,
+                },
+                engine: {
+                  name: "Blink",
+                  version: "537.36",
+                },
+                geolocation: {
+                  latitude: (Math.random() * 180 - 90).toFixed(4),
+                  longitude: (Math.random() * 360 - 180).toFixed(4),
+                  country: getRandomElement(countries),
+                  region: "RegionName",
+                  city: "CityName",
+                },
+              },
+              user: {
+                userId: `user${Math.floor(Math.random() * 10000)}`,
+                userEmailAddress: `user${Math.floor(
+                  Math.random() * 1000
+                )}@example.com`,
+                personId: `person${Math.floor(Math.random() * 10000)}`,
+                personEmailAddress: `person${Math.floor(
+                  Math.random() * 1000
+                )}@example.com`,
+                companyId: `company${Math.floor(Math.random() * 10000)}`,
+                companyName: "Example Company 2",
+              },
+            },
+            event: {
+              eventName: "element_visibility",
+              data: {
+                eventName: "about-element",
+              },
+            },
+          },
+        };
+        events.push(event);
+        current_country_index++;
+      }
+    }
+
+    return events;
+  }
+
+  async function postEvent(event) {
+    try {
+      const response = await fetch("http://localhost:8080/events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(event),
+      });
+      if (response.ok) {
+        //alert("Event posted successfully!");
+      } else {
+        alert("Failed to post event.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while posting the event.");
+    }
+  }
+
+  function postEventWithRetry(event, retries = 3, retryDelay = 1000) {
+    return new Promise((resolve, reject) => {
+      function tryPost(attempt) {
+        fetch("http://localhost:8080/events", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(event),
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log(`Event posted successfully:`, event);
+              resolve(); // Resolve on success
+            } else if (attempt < retries) {
+              console.warn(`Failed attempt ${attempt}. Retrying...`);
+              setTimeout(() => tryPost(attempt + 1), retryDelay);
+            } else {
+              console.error(`Failed to post event after ${retries} attempts:`, event);
+              reject(new Error("Max retries reached")); // Reject after retries exhausted
+            }
+          })
+          .catch((error) => {
+            if (attempt < retries) {
+              console.warn(
+                `Network error on attempt ${attempt}: ${error.message}. Retrying...`
+              );
+              setTimeout(() => tryPost(attempt + 1), retryDelay);
+            } else {
+              console.error(`Failed to post event after ${retries} attempts:`, event);
+              reject(error); // Reject on error after retries
+            }
+          });
+      }
+
+      // Start the first attempt
+      tryPost(1);
+    });
+  }
+
+  function postEvents(number, delay) {
+    const events = generateRandomEvents(number);
+    let currentIndex = 0;
+
+    function postNextEvent() {
+      if (currentIndex >= events.length) {
+        console.log("All events processed sequentially.");
+        return;
+      }
+
+      const event = events[currentIndex++];
+      postEventWithRetry(event)
+        .then(() => {
+          console.log("Event posted successfully:", event);
+          //eventsContainer.innerHTML += `<p>${event}</p>`;
+          addEventToTable(event);
+          increaseTotalEventCount();
+        })
+        .catch((error) => {
+          console.error("Error posting event:", event, error);
+        });
+
+      // Schedule the next event after the delay
+      setTimeout(postNextEvent, delay * 1000);
+    }
+
+    // Start posting events
+    postNextEvent();
+  }
+
+  function changeInput() {
+    sliderLabel.textContent = `Current delay: ${slider.value} seconds`;
+  }
+
+  function pressPostEventsButton() {
+    postEvents(eventsNumberInput.value, slider.value);
+  }
+
+  function increaseTotalEventCount() {
+    totalEventCount += 1;
+    totalEventsLabel.innerHTML = `Total events posted: <b>${totalEventCount}</b>`;
+  }
+
+  sliderLabel.textContent = `Current delay: ${slider.value} seconds`;
+
+  function addEventToTable(event) {
+    const newRow = document.createElement('tr');
+
+    // Add cells to the new row
+    const newCell1 = document.createElement('td');
+    newCell1.textContent = event.eventHeaders.eventTimestamp;
+    const newCell2 = document.createElement('td');
+    newCell2.textContent = event.eventPayload.context.page.url;
+    const newCell3 = document.createElement('td');
+    newCell3.textContent = event.eventPayload.context.session.utmParameters.source;
+    const newCell4 = document.createElement('td');
+    newCell4.textContent = event.eventPayload.context.client.device.type;
+    const newCell5 = document.createElement('td');
+    newCell5.textContent = event.eventPayload.context.client.operatingSystem.name;
+    const newCell6 = document.createElement('td');
+    newCell6.textContent = event.eventPayload.context.client.browser.name;
+    const newCell7 = document.createElement('td');
+    newCell7.textContent = event.eventPayload.context.client.browser.language;
+    const newCell8 = document.createElement('td');
+    newCell8.textContent = event.eventPayload.context.client.geolocation.country;
+
+
+
+    // Append cells to the new row
+    newRow.appendChild(newCell1);
+    newRow.appendChild(newCell2);
+    newRow.appendChild(newCell3);
+    newRow.appendChild(newCell4);
+    newRow.appendChild(newCell5);
+    newRow.appendChild(newCell6);
+    newRow.appendChild(newCell7);
+    newRow.appendChild(newCell8);
+
+    // Insert the new row at the beginning of the tbody, after the headers
+    tbody.insertBefore(newRow, tbody.firstChild);
+  }
+
+
+</script>
+
+</html>
